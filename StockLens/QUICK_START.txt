@@ -1,0 +1,25 @@
+STOCKLENS - QUICK START
+=======================
+
+1. Extract all files from this ZIP.
+2. Windows: Double-click start_windows.bat (requires Python 3.10+, 3.12 recommended).
+   macOS/Linux: Run bash start_linux.sh.
+3. Visit http://127.0.0.1:8000
+4. DEMO ticker is already available offline and prepopulated in the local SQLite DB.
+5. For stock symbols, enter AAPL, MSFT, NVDA, TCS.NS, RELIANCE.NS etc.
+   Those need internet access and availability of Yahoo Finance chart API.
+6. API testing: http://127.0.0.1:8000/docs
+
+SUPABASE:
+- Create your own project at supabase.com.
+- Run supabase/schema.sql in SQL Editor.
+- Copy .env.example to .env and set DATABASE_URL to the real session-pooler
+  PostgreSQL connection string found in Supabase > Connect (use sslmode=require).
+- Restart the server. Backend data is now stored in Supabase.
+- Never expose your database connection string in frontend assets.
+
+DEPLOY:
+- Push code to GitHub, connect repository to Render Web Service, deploy as Docker,
+  and add DATABASE_URL in Render Environment settings.
+
+See README.md for architecture, forecasting methodology, full steps and limitations.
